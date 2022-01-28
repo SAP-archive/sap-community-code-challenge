@@ -3,10 +3,9 @@ import express from 'express'
 import * as path from 'path'
 import favicon from 'serve-favicon'
 import { existsSync as fileExists } from 'fs'
-import { promisify } from 'util'
-import g from "glob"
-const glob = promisify(g)
+
 import * as texts from './utils/texts.js'
+import * as loader from './utils/loader.js'
 
 /**
  * Build the Express Server and Setup Route Loading dynamically from a /routes folder
@@ -32,7 +31,12 @@ export default class ExpressServer {
         this.app = express()
         this.app.bundle = this.bundle
         this.app.express = express
-        this.app.use(favicon(path.join(this.baseDir, 'images', 'favicon.ico')))
+
+        //Load Service/Site Favicon
+        let faviconFile = path.join(this.baseDir, 'images', 'favicon.ico')
+        if (fileExists(faviconFile)) {
+            this.app.use(favicon(faviconFile))
+        }
     }
 
 
@@ -44,22 +48,10 @@ export default class ExpressServer {
         app.baseDir = this.baseDir
 
         //Load express.js
-        let expressFile = path.join(app.baseDir, 'server/express.js')
-        if (fileExists(expressFile)) {
-            const { default: serverInit } = await import(`file://${expressFile}`)
-            serverInit(app)
-        }
+        loader.importFile('server/express.js', app)
 
         //Load routes
-        let routesDir = path.join(this.baseDir, 'routes/**/*.js')
-        let files = await glob(routesDir)
-        this.routerFiles = files
-        if (files.length !== 0) {
-            for (let file of files) {
-                const { default: Route } = await import(`file://${file}`)
-                Route(app)
-            }
-        }
+        loader.importFolder('routes/**/*.js', app)       
 
         this.httpServer = app.listen(this.port)
         console.log(`Express Server Now Running On http://localhost:${this.port}/`)

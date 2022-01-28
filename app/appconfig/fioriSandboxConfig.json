@@ -1,0 +1,36 @@
+{
+    "defaultRenderer": "fiori2",
+    "bootstrapPlugins": {
+        "RuntimeAuthoringPlugin": {
+            "component": "sap.ushell.plugins.rta"
+        },
+        "PersonalizePlugin": {
+            "component": "sap.ushell.plugins.rta-personalize"
+        }
+    },
+    "services": {
+        "NavTargetResolution": {
+            "config": {
+                "allowTestUrlComponentConfig": true,
+                "enableClientSideTargetResolution": true
+            }
+        },
+        "EndUserFeedback": {
+            "adapter": {
+                "config": {
+                    "enabled": true
+                }
+            }
+        }
+    },
+    "applications": {
+        "profilepic-ui": {
+            "title": "",
+            "description": "",
+            "additionalInformation": "SAPUI5.Component=sap.profilePic",
+            "applicationType": "URL",
+            "url": "./profilePic",
+            "navigationMode": "embedded"
+        }
+    }
+}

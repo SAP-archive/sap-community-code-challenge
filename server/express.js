@@ -1,31 +1,19 @@
 import logging from '@sap/logging'
-import { existsSync as fileExists } from 'fs'
-import * as path from 'path'
+import * as loader from '../utils/loader.js'
 
+/**
+ * Configure the Express server and load basic functionality such as health checks and security configuration
+ * @param {Object} app - Express application instance
+ */
 export default async function (app) {
     let appContext = logging.createAppContext({})
     app.logger = appContext.createLogContext().getLogger('/Application')
 
     app.set('etag', false)
 
-    //Load healthCheck.js
-    let healthCheckFile = path.join(app.baseDir, 'server/healthCheck.js')
-    if (fileExists(healthCheckFile)) {
-        const { default: healthCheck } = await import(`file://${healthCheckFile}`)
-        healthCheck(app)
-    }
-    //Load overloadProtection.js
-    let overloadProtectionFile = path.join(app.baseDir, 'server/overloadProtection.js')
-    if (fileExists(overloadProtectionFile)) {
-        const { default: overloadProtection } = await import(`file://${overloadProtectionFile}`)
-        overloadProtection(app)
-    }
-    //Load expressSecurity.js
-    let expressSecurityFile = path.join(app.baseDir, 'server/expressSecurity.js')
-    if (fileExists(expressSecurityFile)) {
-        const { default: expressSecurity } = await import(`file://${expressSecurityFile}`)
-        expressSecurity(app)
-    }
+    loader.importFile('server/healthCheck.js', app)
+    loader.importFile('server/overloadProtection.js', app)
+    loader.importFile('server/expressSecurity.js', app)
 
     app.use(logging.middleware({ appContext: appContext, logNetwork: true }))
 }

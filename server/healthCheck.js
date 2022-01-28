@@ -1,8 +1,12 @@
 import health from '@cloudnative/health-connect'
 import Lag from 'event-loop-lag'
 
+/**
+ * Configure the Express server and load basic functionality such as health checks and security configuration
+ * @param {Object} app - Express application instance
+ */
 export default function (app) {
-    let healthcheck = new health.HealthChecker()
+    let healthCheck = new health.HealthChecker()
     const lagHealth = () => new Promise((resolve, _reject) => {
         let lag = new Lag(1_000)
         if (lag() > 40) {
@@ -11,10 +15,10 @@ export default function (app) {
         resolve()
     })
     let lagCheck = new health.LivenessCheck("Event Loop Lag Check", lagHealth)
-    healthcheck.registerLivenessCheck(lagCheck)
+    healthCheck.registerLivenessCheck(lagCheck)
 
-    app.use('/live', health.LivenessEndpoint(healthcheck))
-    app.use('/ready', health.ReadinessEndpoint(healthcheck))
-    app.use('/health', health.HealthEndpoint(healthcheck))
-    app.use('/healthcheck', health.HealthEndpoint(healthcheck))
+    app.use('/live', health.LivenessEndpoint(healthCheck))
+    app.use('/ready', health.ReadinessEndpoint(healthCheck))
+    app.use('/health', health.HealthEndpoint(healthCheck))
+    app.use('/healthcheck', health.HealthEndpoint(healthCheck))
 }
