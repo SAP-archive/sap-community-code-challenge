@@ -23,11 +23,17 @@ Some of the technology contained within this project:
 * [Sharp - High performance Node.js image processing](https://github.com/lovell/sharp)
 * [SVG Scalable Vector Graphics](https://developer.mozilla.org/en-US/docs/Web/SVG)
 
+## Challenges
+
+sdfs
+
 ## Requirements
 
 Node.js version 12.x, 14.x, or 16.x [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 ## Download and Installation
+
+See [Challenges](#Challenges)
 
 ## Known Issues
 
