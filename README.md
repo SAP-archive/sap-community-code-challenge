@@ -25,7 +25,27 @@ Some of the technology contained within this project:
 
 ## Challenges
 
-sdfs
+Although this project is a complete code sample, it's really only intended to be the starting point. It's part of a code challenge; which means have some fun and learn at the same time.  For the full details on the Code Challenge please see this [SAP Community Discussion Thread](https://groups.community.sap.com/t5/coffee-corner/gh-p/Coffee-Corner). But let's detail right here some of the possible challenges you might undertake using this starting point.
+
+The whole project can run locally. It's a SAPUI5 app where you start by uploading the base picture you want.  You can do some editing on it (like I flipped it in the video).  Then you set it to a circular crop (since that's is what the SAP Community profile pic requires).  When you press enhance picture it's uploaded to the "server" there we apply the boarder.  Then you can save the final file (or edit if further if you want). Upon save it automatically opens your SAP Community Profile in another browser tab.  There you can upload your newly enhanced profile picture.  Now that you understand what the code sample does; here are the challenges.
+
+### Run the Project Locally
+
+### Run the Project on the SAP Business Application Studio
+
+### Run the Project in a Dev Container or Codespaces
+
+### Learn about SVG - Change the Enhancement
+
+Create your own profile enhancement. Maybe instead of a board it adds your profile name, badges, etc.
+
+### Port the Whole Project to Another Programming Language
+
+Try and port the whole project to another programming language. I'm sure we will let lots of people converting it to ABAP.
+
+### Multiple Image Enhancement Options in the UI
+
+Extend the app to offer multiple server side enhancements but then extend the SAPUI5 frontend to allow the end user to choose the enhancement type. The trick there is sending the choice along with the upload (it can be done but its tricky). That challenge would be focused on UI5 skills.
 
 ## Requirements
 
@@ -33,7 +53,7 @@ Node.js version 12.x, 14.x, or 16.x [https://nodejs.org/en/download/](https://no
 
 ## Download and Installation
 
-See [Challenges](#Challenges)
+See [Challenges](#challenges)
 
 ## Known Issues
 
