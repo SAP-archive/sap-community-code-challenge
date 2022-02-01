@@ -16,6 +16,13 @@ The [change log](https://github.com/SAP-samples/sap-community-awareness-code-cha
 
 SAP Community Awareness Code Challenge: This repository is a template project/solution showing how to enhance your SAP Community profile picture with a new border.
 
+Some of the technology contained within this project:
+
+* [Node.js](https://nodejs.org/en/about/)
+* [SAPUI5 Image Editor Control](https://sapui5.hana.ondemand.com/#/entity/sap.suite.ui.commons.imageeditor)
+* [Sharp - High performance Node.js image processing](https://github.com/lovell/sharp)
+* [SVG Scalable Vector Graphics](https://developer.mozilla.org/en-US/docs/Web/SVG)
+
 ## Requirements
 
 Node.js version 12.x, 14.x, or 16.x [https://nodejs.org/en/download/](https://nodejs.org/en/download/)

@@ -1,7 +1,8 @@
 {
     "cSpell.words": [
         "appconfig",
-        "healthcheck"
+        "healthcheck",
+        "SAPUI"
     ],
     "SAP HANA Database Explorer.displaySapWebAnalyticsStartupNotification": false
 }
