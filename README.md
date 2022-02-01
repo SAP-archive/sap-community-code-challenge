@@ -10,7 +10,7 @@
 
 [![Contributors Display](https://badges.pufler.dev/contributors/SAP-samples/sap-community-awareness-code-challenge?size=50&padding=5&bots=false)](https://badges.pufler.dev)
 
-The [change log](https://github.com/SAP-samples/sap-community-awareness-code-challenge/CHANGELOG.md) describes notable changes in this package.
+The [change log](https://github.com/SAP-samples/sap-community-awareness-code-challenge/blob/main/CHANGELOG.md) describes notable changes in this package.
 
 ## Description
 
