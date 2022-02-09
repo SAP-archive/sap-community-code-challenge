@@ -1,7 +1,7 @@
 {
-  "name": "sap-community-awareness-code-challenge",
+  "name": "sap-community-code-challenge",
   "version": "1.0.0",
-  "description": "SAP Community Awareness Code Challenge: This repository is a template project/solution showing how to enhance your SAP Community profile picture with a new border.",
+  "description": "SAP Community Code Challenge: This repository is a template project/solution showing how to enhance your SAP Community profile picture with a new border.",
   "main": "index.js",
   "engines": {
     "node": "^12.0.0 || ^14.0.0 || ^16.0.0"
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SAP-samples/sap-community-awareness-code-challenge.git"
+    "url": "git+https://github.com/SAP-samples/sap-community-code-challenge.git"
   },
   "keywords": [
     "sap-community",
@@ -26,9 +26,9 @@
   "author": "SAP",
   "license": "SEE LICENSE IN LICENSES",
   "bugs": {
-    "url": "https://github.com/SAP-samples/sap-community-awareness-code-challenge/issues"
+    "url": "https://github.com/SAP-samples/sap-community-code-challenge/issues"
   },
-  "homepage": "https://github.com/SAP-samples/sap-community-awareness-code-challenge#readme",
+  "homepage": "https://github.com/SAP-samples/sap-community-code-challenge#readme",
   "dependencies": {
     "@cloudnative/health-connect": "^2.1.0",
     "@sap/logging": "^6.0.3",
