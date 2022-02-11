@@ -65,6 +65,21 @@ The whole project can run locally. It's a [SAPUI5 app](/profilePic/#profilepic-u
 
 ### Run the Project in a Dev Container or Codespaces
 
+1. From GitHub choose the option to create a new codespace.
+    ![Create codespace](images/cs_create.png)
+
+2. You can then use this codespace from the browser or open it remotely in your locally VSCode installation.  The codespace will be pre-configured with the correct Node.js runtime and already has the project cloned into it.
+    ![Clone into Workspace](images/cs_ready.png)
+
+3. From the root of the project in a terminal issue the command `npm install`. This will install all project dependencies into the /node_modules folder.
+    ![npm install](images/cs_npm_install.png)
+
+4. Once all dependencies are installed, issue the command `npm start` from the terminal. This will start a local web server. You can test the application locally by using the "Open in Browser" button
+    ![npm start](images/cs_npm_run.png)
+
+5. [Optional]: If you plan to make changes to the project code, there is a command `npm run dev` that you can use for testing. This command will automatically restart the server with each code change you make. This can be quite convenient when making frequent changes and constantly retesting.
+    ![npm run dev](images/cs_npm_run_dev.png)
+
 ### Learn about SVG - Change the Enhancement
 
 Create your own profile enhancement. Maybe instead of a board it adds your profile name, badges, etc.
