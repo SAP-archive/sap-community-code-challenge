@@ -32,6 +32,7 @@ The whole project can run locally. It's a [SAPUI5 app](/profilePic/#profilepic-u
 ### Run the Project Locally
 
 1. Ensure that you have [Node.js](https://nodejs.org/en/about/) ver 12, 14 or 16 installed locally.
+![Node Version Check](images/node_v_check.png)
 
 2. [Clone this repository](https://github.com/SAP-samples/sap-community-code-challenge.git)
 
