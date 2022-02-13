@@ -27,7 +27,7 @@ Some of the technology contained within this project:
 
 Although this project is a complete code sample, it's really only intended to be the starting point. It's part of a code challenge; which means have some fun and learn at the same time.  For the full details on the Code Challenge please see this [SAP Community Discussion Thread](https://groups.community.sap.com/t5/coffee-corner/gh-p/Coffee-Corner). But let's detail right here some of the possible challenges you might undertake using this starting point.
 
-The whole project can run locally. It's a [SAPUI5 app](/profilePic/#profilepic-ui) where you start by uploading the base picture you want.  You can do some editing on it. Then you set it to a circular crop (since that's is what the SAP Community profile pic requires).  When you press enhance picture it's uploaded to the "server" there we apply the boarder.  Then you can save the final file (or edit if further if you want). Upon save it automatically opens your SAP Community Profile in another browser tab.  There you can upload your newly enhanced profile picture.  Now that you understand what the code sample does; here are the challenges.
+The whole project can run locally. It's a [SAPUI5 app](/profilePic/#profilepic-ui) where you start by uploading the base picture you want.  You can do some editing on it. Then you set it to a circular crop (since that's is what the SAP Community profile pic requires).  When you press enhance picture it's uploaded to the "server" there we apply the border.  Then you can save the final file (or edit if further if you want). Upon save it automatically opens your SAP Community Profile in another browser tab.  There you can upload your newly enhanced profile picture.  Now that you understand what the code sample does; here are the challenges.
 
 ### Run the Project Locally
 
@@ -40,7 +40,7 @@ The whole project can run locally. It's a [SAPUI5 app](/profilePic/#profilepic-u
 3. From the root of the project in a terminal issue the command `npm install`. This will install all project dependencies into the /node_modules folder.
     ![npm install](images/npm_install.png)
 
-4. Once all dependencies are installed, issue the command `npm start` from the terminal. This will start a local web server. You can test the application locally via the url: [http://localhost:4000/](http://localhost:4000/)
+4. Once all dependencies are installed, issue the command `npm start` from the terminal. This will start a local web server. You can test the application locally via the url: [http://localhost:4000/profilepic/](http://localhost:4000/profilepic/)
     ![npm start](images/npm_start.png)
 
 5. [Optional]: If you plan to make changes to the project code, there is a command `npm run dev` that you can use for testing. This command will automatically restart the server with each code change you make. This can be quite convenient when making frequent changes and constantly retesting.
@@ -82,7 +82,7 @@ The whole project can run locally. It's a [SAPUI5 app](/profilePic/#profilepic-u
 
 ### Learn about SVG - Change the Enhancement
 
-Create your own profile enhancement. Maybe instead of a board it adds your profile name, badges, etc.
+Create your own profile enhancement. Maybe instead of a border it adds your profile name, badges, etc.
 
 ### Port the Whole Project to Another Programming Language
 
