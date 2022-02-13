@@ -1,7 +1,7 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: [sap-community-awareness-code-challenge]
+Upstream-Name: [sap-community-code-challenge]
 Upstream-Contact: Thomas Jung
-Source: https://github.com/sap-samples/sap-community-awareness-code-challenge
+Source: https://github.com/sap-samples/sap-community-code-challenge
 Disclaimer: The code in this project may include calls to APIs (“API Calls”) of
  SAP or third-party products or services developed outside of this project
  (“External Products”).
