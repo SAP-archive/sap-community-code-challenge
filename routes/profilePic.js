@@ -69,10 +69,13 @@ export default function (app) {
             //Convert the uploaded content to PNG, rotate based upon metadata and transfer it to a buffer
             const uploadContent = await sharp(file.buffer).rotate().png().toBuffer()
             const uploadContentMeta = await sharp(uploadContent).metadata()
+            //Select a random borderPic
+            const borderPics = ["border1.png", "border2.png"]
+            const randomBorderPic = borderPics[Math.floor(Math.random() * borderPics.length)]
             let body =
                 svg.svgHeader(uploadContentMeta.width, uploadContentMeta.height) +
                 svg.svgItem(0, 0, 0, uploadContent.toString('base64'), uploadContentMeta.height, uploadContentMeta.width, true) +
-                svg.svgItem(0, 0, 0, await loadImageB64('./images/boarder.png'), uploadContentMeta.height, uploadContentMeta.width, true) +
+                svg.svgItem(0, 0, 0, await loadImageB64(`./images/${randomBorderPic}`), uploadContentMeta.height, uploadContentMeta.width, true) +
                 svg.svgEnd()
 
             const png = await sharp(Buffer.from(body)).png().toBuffer()
