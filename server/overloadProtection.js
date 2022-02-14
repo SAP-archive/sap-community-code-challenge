@@ -1,5 +1,5 @@
 /**
- * Add overload protection to the Express instance 
+ * Add overload protection to the Express instance
  * @param {Object} app - Express application instance
  */
 export default async function (app) {
@@ -10,13 +10,13 @@ export default async function (app) {
         maxEventLoopDelay: 100, // maximum detected delay between event loop ticks [default 42]
         maxHeapUsedBytes: 0, // maximum heap used threshold (0 to disable) [default 0]
         maxRssBytes: 0, // maximum rss size threshold (0 to disable) [default 0]
-        errorPropagationMode: false, // dictate behavior: take over the response 
+        errorPropagationMode: false, // dictate behavior: take over the response
         logging: (message) => {
-            app.logger.error(message)
+            app.logger.error(message);
         }
         // or propagate an error to the framework [default false]
-    }
-    const { default: OverloadProtection } = await import('overload-protection')
-    const protect = OverloadProtection('express', protectCfg)
-    app.use(protect)
+    };
+    const { default: OverloadProtection } = await import('overload-protection');
+    const protect = OverloadProtection('express', protectCfg);
+    app.use(protect);
 }

@@ -1,8 +1,8 @@
-import { createRequire } from 'module'
-const require = createRequire(import.meta.url)
-const TextBundle = require('@sap/textbundle').TextBundle
-import langParser from 'accept-language-parser'
-import path from 'path'
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const TextBundle = require('@sap/textbundle').TextBundle;
+import langParser from 'accept-language-parser';
+import path from 'path';
 
 /**
  * Get Locale from HTTP Request Header
@@ -11,29 +11,29 @@ import path from 'path'
  */
 export function getLocale(req) {
     if (req) {
-        let lang = req.headers["accept-language"]
+        let lang = req.headers['accept-language'];
         if (!lang) {
-            return
+            return;
         }
-        let arr = langParser.parse(lang)
+        let arr = langParser.parse(lang);
         if (!arr || arr.length < 1) {
-            return
+            return;
         }
-        let locale = arr[0].code
+        let locale = arr[0].code;
         if (arr[0].region) {
-            locale += "-" + arr[0].region
+            locale += '-' + arr[0].region;
         }
-        return locale
-    }else{
-        return
+        return locale;
+    } else {
+        return;
     }
 }
 
 /**
  * Get Text Bundle from sap/textbundle
  * @param {*} req - HTTP Request object from Express
- * @returns @typeof TextBundle - instance of sap/textbundle 
+ * @returns @typeof TextBundle - instance of sap/textbundle
  */
 export function getBundle(req) {
-    return new TextBundle(path.resolve(process.cwd(), "./_i18n/messages"), getLocale(req))
+    return new TextBundle(path.resolve(process.cwd(), './_i18n/messages'), getLocale(req));
 }
