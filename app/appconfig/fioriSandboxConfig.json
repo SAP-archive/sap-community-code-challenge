@@ -27,9 +27,9 @@
         "profilepic-ui": {
             "title": "",
             "description": "",
-            "additionalInformation": "SAPUI5.Component=sap.profilePic",
+            "additionalInformation": "SAPUI5.Component=ui5.ts.profile.picture.editor",
             "applicationType": "URL",
-            "url": "./profilePic",
+            "url": "./webapp",
             "navigationMode": "embedded"
         }
     }

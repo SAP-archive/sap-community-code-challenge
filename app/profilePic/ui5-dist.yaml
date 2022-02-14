@@ -1,0 +1,18 @@
+specVersion: "2.0"
+metadata:
+  name: ui5.ts.profile.picture.editor
+type: application
+resources:
+  configuration:
+    paths:
+      webapp: dist
+framework:
+  name: SAPUI5
+  version: "1.98.0"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: sap.ui.unified
+    - name: sap.suite.ui.commons
+    - name: themelib_sap_fiori_3
+    - name: themelib_sap_horizon

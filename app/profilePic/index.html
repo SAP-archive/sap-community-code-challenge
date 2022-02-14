@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="expires" content="0" />
 
-<head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<script src="https://sapui5.hana.ondemand.com/1.98.0/test-resources/sap/ushell/bootstrap/sandbox.js"></script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SAP Community Profile Picture Editor</title>
+        <script src="https://sapui5.hana.ondemand.com/1.98.0/test-resources/sap/ushell/bootstrap/sandbox.js"></script>
 
-	<script src="https://sapui5.hana.ondemand.com/1.98.0/resources/sap-ui-core.js"
-		data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration, sap.ui.layout, sap.ui.rta, sap.uxap"
-		data-sap-ui-compatVersion="edge" data-sap-ui-theme="sap_fiori_3"
-		data-sap-ui-async="true"
-		data-sap-ui-frameOptions="trusted"
-		data-sap-ui-bindingSyntax="complex"
-		data-sap-ui-xx-bindingSyntax="complex"
-		data-sap-ui-resourceroots='{"profilePic": "./profilePic", 
-										"root": "./"}'
-		data-sap-ui-frameOptions="allow"></script>
+        <script
+            id="sap-ui-bootstrap"
+            src="https://sapui5.hana.ondemand.com/1.98.0/resources/sap-ui-core.js"
+            data-sap-ui-libs="sap.m, sap.ushell, sap.collaboration, sap.ui.layout, sap.ui.rta, sap.uxap, sap.ui.unified, sap.suite.ui.commons"
+            data-sap-ui-resourceroots='{
+              "ui5.ts.profile.picture.editor": "/profilePic/webapp",
+              "root": "./"
+            }'
+            data-sap-ui-compatVersion="edge"
+            data-sap-ui-async="true"
+            data-sap-ui-frameOptions="trusted"
+            data-sap-ui-bindingSyntax="complex"
+            data-sap-ui-xx-bindingSyntax="complex"
+            data-sap-ui-xx-waitForTheme="true"
+            data-sap-ui-xx-supportedLanguages="en,de"
+            data-sap-ui-theme="sap_horizon"
+        ></script>
 
-	<style>
-		html, body {height: 100%;}
-	</style>
-	<script>
-		if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-			sap.ui.getCore().applyTheme( "sap_fiori_3_dark" )//"sap_horizon")
-		}
-		sap.ui.getCore().attachInit(() => {
-			sap.ushell.Container.createRenderer().placeAt("content")
-		})
-	</script>
+        <style>
+            html,
+            body {
+                height: 100%;
+            }
+        </style>
 
-</head>
+        <script>
+            // enforce the "sap_horizon" theme because it is beautiful
+            sap.ui.getCore().applyTheme('sap_horizon');
 
-<body class="sapUiBody" id="content"></body>
+            sap.ui.getCore().attachInit(() => {
+                sap.ushell.Container.createRenderer().placeAt('content');
+            });
+        </script>
+    </head>
 
+    <body class="sapUiBody" id="content"></body>
+    <!-- <body class="sapUiBody">
+        <div data-sap-ui-component data-name="ui5.ts.profile.picture.editor"></div>
+    </body> -->
 </html>

@@ -1,0 +1,7 @@
+<mvc:View controllerName="ui5.ts.profile.picture.editor.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true">
+
+	<App id="app" busy="{UIState>/app/busy}" busyIndicatorDelay="{UIState>/app/busyDelay}" />
+
+</mvc:View>

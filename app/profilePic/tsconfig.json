@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2015",
+    "module": "es2015",
+    "skipLibCheck": true,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": false,
+    "strictPropertyInitialization": false,
+    "rootDir": "./src",
+    "outDir": "./webapp",
+    "baseUrl": "./",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/@sapui5/ts-types-esm"
+    ],
+    "paths": {
+      "ui5/ts/profile/picture/editor/*": ["./src/*"]
+    },
+    "moduleResolution": "Node"
+  },
+  "include": ["./src/**/*"]
+}
