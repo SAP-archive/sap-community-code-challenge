@@ -4,6 +4,8 @@ import lodash from 'lodash'
 import * as svg from '../utils/svgRender.js'
 import { promises as fs } from 'fs'
 import * as path from 'path'
+import { createPixelPerson } from "../pixel-person/pixelPerson.js"
+
 
 /**       
  * Route for handing upload, manipulation, and download of the profile picture
@@ -84,4 +86,13 @@ export default function (app) {
 
         })
     })
+
+    app.post("/get-pixel-person", function(req, res) {
+        //console.log(req.body)
+        res.send(createPixelPerson(req.body));
+    });
+
+    app.get("/test", function(req, res) {
+        res.status(200).send({ message: "During development this is supposed to be the backend only." });
+      });
 }
