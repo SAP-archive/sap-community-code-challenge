@@ -25,9 +25,7 @@
             <e:CustomSizeItem width="1" height="1" label="1:1" relative="true"/>
 
         </e:customEllipseCropItems>
-
-
-
+        
     </e:ImageEditorContainer>
 
     <html:style>

@@ -30,6 +30,7 @@ sap.ui.define([
                     oImageEditor.setCustomShapeSrc(sap.ui.require.toUrl("sap/suite/ui/commons/statusindicator") + "/shapes/bulb.svg")
                 }
             },
+            
             openPixelPersonDialog: function () {
                 if (!this.oDefaultDialog) {
                     this.oDefaultDialog = new Dialog({
@@ -82,10 +83,12 @@ sap.ui.define([
     
                 this.oDefaultDialog.open();
             },
+
             handleColorSelect: function (oEvent) {
                 let siblingInput = oEvent.getSource().getParent().getContent()[2]
                 siblingInput.setValue(oEvent.getParameter("value"))
             },
+
             getPixelPersonRequestBody: function () {
                 let dataFromModel = this.getView().getModel().getData().pixelPersonConfigArray
                 let requestBody = {}
@@ -99,6 +102,7 @@ sap.ui.define([
                 }
                 return requestBody
             },
+
             getPixelPerson: function () {
                 let controller = this
                 let reqSettings = {
@@ -141,6 +145,7 @@ sap.ui.define([
                     artAreaImg.setSrc(dataURI)
                   });
             },
+
             //enhance
             uploadPressed: async function (oEvent) {
                 let view = this.getView()
@@ -188,8 +193,8 @@ sap.ui.define([
                 let oImageEditor = view.byId("image")
                 oImageEditor.openSaveDialog()
                 controller.openUrl('https://people.sap.com/', true)
-
             },
+
             onImageLoaded: async function (oEvent) {
                 let view = this.getView()
                 let oImageEditor = view.byId("image")
@@ -197,10 +202,8 @@ sap.ui.define([
                 oImageEditor.setCropAreaByRatio(1, 1)
                 oImageEditor.setMode(SuiteLibrary.ImageEditorMode.CropEllipse)
                 console.log(oImageEditor.getMode())
-
-
-
             },
+
             onFileChange: async function (oEvent) {
                 var oFile = oEvent.getParameter("files")[0],
                     oImageEditor = this.getView().byId("image")
@@ -209,7 +212,6 @@ sap.ui.define([
                 }
                 this.getView().getModel().setProperty("/blocked", true)
                 await oImageEditor.setSrc(oFile)
-
             }
         })
     }

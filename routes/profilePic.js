@@ -91,8 +91,4 @@ export default function (app) {
         //console.log(req.body)
         res.send(createPixelPerson(req.body));
     });
-
-    app.get("/test", function(req, res) {
-        res.status(200).send({ message: "During development this is supposed to be the backend only." });
-      });
 }
