@@ -15,7 +15,7 @@
                 </unified:parameters>
             </unified:FileUploader>
             <Button id="button" text="{i18n>Upload}" press="uploadPressed"></Button>
-            <Button type="Emphasized" text="Save As" press="onSaveAsPress" />
+            <Button type="Emphasized" text="Save As" press="onSaveAsPress" id="downloadButton" />
         </e:customToolbarControls> 
         <e:customEllipseCropItems>
             <e:CustomSizeItem width="1" height="1" label="1:1" relative="true"/>
