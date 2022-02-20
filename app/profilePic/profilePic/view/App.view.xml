@@ -2,13 +2,14 @@
 	<e:ImageEditorContainer id="editor" enabledButtons="Crop,Transform,Filter" mode="Crop">
 		<e:ImageEditor id="image" loaded="onImageLoaded" scaleCropArea="true" mode="CropEllipse"/>
 		<e:customToolbarControls>
-			<unified:FileUploader id="fileToUpload" sendXHR="true" width="400px" placeholder="{i18n>placeholder}" uploadUrl="/upload_profile_pic" uploadComplete="uploadComplete" change="onFileChange" class="sapUiLargeMarginEnd">
+			<unified:FileUploader id="fileToUpload" sendXHR="true" width="400px" placeholder="{i18n>placeholder}" uploadUrl="/upload_profile_pic" uploadComplete="uploadComplete" change="onFileChange" class="sapUiTinyMarginEnd">
 				<unified:parameters>
 					<unified:FileUploaderParameter id="uploadParam" name="selectedPic"/>
 				</unified:parameters>
 			</unified:FileUploader>
 			<Button id="button" text="{i18n>Upload}" press="uploadPressed"/>
-			<Button type="Emphasized" text="{i18n>save}" press="onSaveAsPress" class="sapUiLargeMarginEnd"/>
+			<Button type="Emphasized" text="{i18n>save}" press="onSaveAsPress" class="sapUiTinyMarginEnd"/>
+			<Button type="Emphasized" text="Get Avatar" press="onGetMyAvatar" class="sapUiTinyMarginEnd sapUiSmallMarginBegin"/>
 			<Select forceSelection="false" items="{
 					path: 'languages>/languages',
 					sorter: { path: 'text' }
