@@ -63,14 +63,14 @@ exports.config = {
         prefs: {
           directory_upgrade: true,
           prompt_for_download: false,
-          "download.default_directory": join(__dirname, "test", "__assets__"),
-        },
-      },
+          "download.default_directory": join(__dirname, "test", "__assets__")
+        }
+      }
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
       // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
       // excludeDriverLogs: ['bugreport', 'server'],
-    },
+    }
   ],
   //
   // ===================
@@ -125,7 +125,7 @@ exports.config = {
     screenshotPath: join("test", "__screenshots__"),
     logLevel: "verbose", // error | verbose | silent
     url: "",
-    skipInjectUI5OnStart: false, // default
+    skipInjectUI5OnStart: false // default
   },
 
   // Framework you want to run your specs with.
@@ -155,8 +155,8 @@ exports.config = {
   // See the full list at http://mochajs.org/
   mochaOpts: {
     ui: "bdd",
-    timeout: 60000,
-  },
+    timeout: 60000
+  }
   //
   // =====
   // Hooks
