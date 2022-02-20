@@ -55,7 +55,7 @@ describe("profile pic modification flow", () => {
           viewName: "profilePic.view.App"
         }
       })
-      .firePress() // this will go away with wdi5 0.9.0 and replace by .press()
+      .firePress() // this will go away with wdi5 0.9.0 and replaced by .press()
 
     await browser
       .asControl({
@@ -63,7 +63,7 @@ describe("profile pic modification flow", () => {
           id: /.*button1$/
         }
       })
-      .firePress() // this will go away with wdi5 0.9.0 and replace by .press()
+      .firePress() // this will go away with wdi5 0.9.0 and replaced by .press()
 
     // wdi5
     browser.screenshot("uploaded-image")
@@ -78,7 +78,9 @@ describe("profile pic modification flow", () => {
           viewName: "profilePic.view.App"
         }
       })
-      .firePress() // this will go away with wdi5 0.9.0 and replace by .press()
+      .firePress() // this will go away with wdi5 0.9.0 and replaced by .press()
+
+    // by the books, awaiting file creation would be advisable here
 
     // vanilla Node.js
     const downloadedFile = join(__dirname, "__assets__", "image.png")
