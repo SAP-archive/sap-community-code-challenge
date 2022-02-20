@@ -9,10 +9,10 @@ describe("profile pic modification flow", () => {
       .asControl({
         selector: {
           properties: {
-            text: "SAP Community Profile Picture Editor",
+            text: "SAP Community Profile Picture Editor"
           },
-          controlType: "sap.m.Text",
-        },
+          controlType: "sap.m.Text"
+        }
       })
       .getParent()
       .getParent()
@@ -32,8 +32,8 @@ describe("profile pic modification flow", () => {
       forceSelect: true,
       selector: {
         id: "fileToUpload",
-        viewName: "profilePic.view.App",
-      },
+        viewName: "profilePic.view.App"
+      }
     })
     // get the input type=file html element
     const $uploader = await uploader.getWebElement()
@@ -52,16 +52,16 @@ describe("profile pic modification flow", () => {
       .asControl({
         selector: {
           id: "button",
-          viewName: "profilePic.view.App",
-        },
+          viewName: "profilePic.view.App"
+        }
       })
       .firePress() // this will go away with wdi5 0.9.0 and replace by .press()
 
     await browser
       .asControl({
         selector: {
-          id: /.*button1$/,
-        },
+          id: /.*button1$/
+        }
       })
       .firePress() // this will go away with wdi5 0.9.0 and replace by .press()
 
@@ -75,8 +75,8 @@ describe("profile pic modification flow", () => {
       .asControl({
         selector: {
           id: "downloadButton",
-          viewName: "profilePic.view.App",
-        },
+          viewName: "profilePic.view.App"
+        }
       })
       .firePress() // this will go away with wdi5 0.9.0 and replace by .press()
 
