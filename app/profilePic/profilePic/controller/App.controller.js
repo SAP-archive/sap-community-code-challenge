@@ -7,9 +7,12 @@ sap.ui.define([
     "sap/ui/core/Core",
     "sap/ui/model/json/JSONModel",
     "sap/ui/Device",
-    "sap/suite/ui/commons/library"
+    "sap/suite/ui/commons/library",
+    "sap/m/Dialog",
+    "sap/m/Button",
+    "sap/m/Input",
 ],
-    function (BaseController, MessageToast, oCore, JSONModel, Device, SuiteLibrary) {
+    function (BaseController, MessageToast, oCore, JSONModel, Device, SuiteLibrary, Dialog, Button, Input) {
 
         return BaseController.extend("profilePic.controller.App", {
             onInit: function () {
@@ -25,7 +28,41 @@ sap.ui.define([
                 }
             },
 
-            uploadPressed: async function (oEvent) {
+            enhancePressed: async function (oEvent) {
+                if (!this.oEnhanceDialog) {
+                    var oResourceBundle = this.getView()
+                                              .getModel("i18n")
+                                              .getResourceBundle()
+                    this.oEnhanceDialog = new Dialog({
+                        title: oResourceBundle.getText("enterSapCommunityName"),
+                        draggable: true,
+                        content: new Input({
+                            placeholder: oResourceBundle.getText("yourSapCommunityNameEG") + "dj.adams.sap",
+                            value: "{/sapCommunityName}"
+                        }),
+                        buttons: [ 
+                            new Button({
+                                text: oResourceBundle.getText("enhance"),
+                                press: function () {
+                                    this.upload()
+                                    this.oEnhanceDialog.close()
+                                }.bind(this)
+                            }),
+                            new Button({
+                                text: oResourceBundle.getText("close"),
+                                press: function () {
+                                    this.oEnhanceDialog.close()
+                                }.bind(this)
+                            })
+                        ]
+                    })
+                    this.getView().addDependent(this.oEnhanceDialog)
+                }
+
+                this.oEnhanceDialog.open()
+            },
+
+            upload: async function (oEvent) {
                 let view = this.getView()
                 let controller = view.getController()
                 let oFileUploader = view.byId("fileToUpload")
@@ -35,6 +72,7 @@ sap.ui.define([
                 }
                 let param = view.byId("uploadParam")
                 //param.setValue(oInput.getActivePage())
+                param.setValue(this.getView().getModel().getData().sapCommunityName)
                 oFileUploader.getParameters()
                 var oImageEditor = this.getView().byId("image")
                 oImageEditor.applyVisibleCrop()
