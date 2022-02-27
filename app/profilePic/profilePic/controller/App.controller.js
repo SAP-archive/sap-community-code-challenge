@@ -13,12 +13,13 @@ sap.ui.define([
 		"sap/m/DialogType",
 		"sap/m/Button",
 		"sap/m/ButtonType",
-		"sap/m/TextArea"
+		"sap/m/TextArea",
+        "./webclient"
 
 
 
     ],
-    function (BaseController, MessageToast, MessageBox, oCore, JSONModel, Device, SuiteLibrary,Dialog, DialogType,Button,ButtonType, TextArea) {
+    function (BaseController, MessageToast, MessageBox, oCore, JSONModel, Device, SuiteLibrary,Dialog, DialogType,Button,ButtonType, TextArea,webclient) {
 
     return BaseController.extend("profilePic.controller.App", {
         onInit: function () {
@@ -40,6 +41,32 @@ sap.ui.define([
 
 
         },
+
+		onAfterRendering: function () {
+			// Set up chatbot
+			this.renderCAIChatBot()
+            window.sapcai.webclientBridge.imageeditor = this.getView().byId("image")
+        },
+		
+		// Show chatbot
+		renderCAIChatBot: function () {
+			// if (!document.getElementById("recast-webchat")) {
+				// var s = document.createElement("script");
+				// s.setAttribute("src", "webclient.js");
+                // document.body.appendChild(s);
+
+				var s = document.createElement("script");
+				s.setAttribute("src", "https://cdn.cai.tools.sap/webclient/bootstrap.js");
+				s.setAttribute("id", "cai-webclient-custom");
+                s.setAttribute("data-expander-preferences",data_expander_preferences);
+				s.setAttribute("data-channel-id",data_channel_id);
+				s.setAttribute("data-token",data_token);
+				s.setAttribute("data-expander-type","CAI");
+                document.body.appendChild(s);
+			// }
+		},
+
+
 
         uploadPressed: async function (oEvent) {
             let view = this.getView()
