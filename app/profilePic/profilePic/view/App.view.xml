@@ -6,7 +6,9 @@
     xmlns:unified="sap.ui.unified"
     xmlns:e="sap.suite.ui.commons.imageeditor"
     xmlns="sap.m">
-    <e:ImageEditorContainer id="editor" enabledButtons="Crop,Transform,Filter" mode="Crop">
+
+    	<core:HTML content='&lt;div id="editor" class="tui-image-editor-container">&lt;&gt;div&gt;' />
+    <!-- <e:ImageEditorContainer id="editor" enabledButtons="Crop,Transform,Filter" mode="Crop">
         <e:ImageEditor id="image" loaded="onImageLoaded" scaleCropArea="true" mode="CropEllipse" />
         <e:customToolbarControls>
             <unified:FileUploader id="fileToUpload" sendXHR="true" width="400px" placeholder="{i18n>placeholder}" uploadUrl="/upload_profile_pic" uploadComplete="uploadComplete" change="onFileChange">
@@ -24,5 +26,5 @@
 
 
 
-    </e:ImageEditorContainer>
+    </e:ImageEditorContainer> -->
 </mvc:View>
