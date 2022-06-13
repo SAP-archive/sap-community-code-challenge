@@ -49,9 +49,10 @@
           "switchableProp": false,
           "colors": [
             "#323233",
-            "#323233"
+            "#F2F2F2",
+            "#E6E6E6"
           ],
-          "selectedColor": "#323233"
+          "selectedColor": "#F2F2F2"
         },
         {
           "label": "Shirt 2",
@@ -59,9 +60,10 @@
           "switchableProp": false,
           "colors": [
             "#000",
-            "#000"
+            "#E6E6E6",
+            "#D7D7D7"
           ],
-          "selectedColor": "#000"
+          "selectedColor": "#E6E6E6"
         },
         {
           "label": "Pants 1",
@@ -89,7 +91,7 @@
           "switchableProp": false,
           "colors": [
             "#000",
-            "#000"
+            "#D40000"
           ],
           "selectedColor": "#000"
         },
@@ -99,9 +101,10 @@
           "switchableProp": false,
           "colors": [
             "#323233",
-            "#323233"
+            "#D40000",
+            "#000"
           ],
-          "selectedColor": "#323233"
+          "selectedColor": "#000"
         },
         {
           "label": "Shadow",
@@ -174,6 +177,28 @@
           "isSelected": false,
           "colors": [
             "#000",
+            "#000"
+          ],
+          "selectedColor": "#000"
+        },
+        {
+          "label": "Stripe",
+          "id": "stripe",
+          "switchableProp": false,
+          "isSelected": true,
+          "colors": [
+            "#e6104a",
+            "#e6104a"
+          ],
+          "selectedColor": "#e6104a"
+        },
+        {
+          "label": "Socks",
+          "id": "socks",
+          "switchableProp": false,
+          "isSelected": true,
+          "colors": [
+            "#FFF",
             "#000"
           ],
           "selectedColor": "#000"

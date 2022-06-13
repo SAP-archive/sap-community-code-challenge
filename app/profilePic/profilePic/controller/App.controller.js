@@ -126,7 +126,7 @@ sap.ui.define([
                     pixelPersonCanvas.width = (response[0].length * pixelSize) + (2 * artPadding)
                     pixelPersonCanvas.height = (response.length * pixelSize) + (2 * artPadding)
                     let canvasCtx = pixelPersonCanvas.getContext("2d")
-                    canvasCtx.fillStyle = "#FFF"
+                    canvasCtx.fillStyle = "#999"
                     canvasCtx.fillRect(0, 0, pixelPersonCanvas.width, pixelPersonCanvas.height);
                     for (let i = 0; i < response.length; i++) {
                         for (let p = 0; p < response[i].length; p++) {

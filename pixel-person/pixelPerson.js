@@ -1,5 +1,5 @@
 const artCanvas = [17, 58]
-const backgroundCol = "#ffffff"
+const backgroundCol = "#999"
 const switchConfig = [
     ["glasses", "eyes"],
     ["beard", "mouth"],
