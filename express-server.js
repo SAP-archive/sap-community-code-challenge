@@ -29,6 +29,7 @@ export default class ExpressServer {
         this.baseDir = process.cwd()
         this.routes = []
         this.app = express()
+        this.app.use(express.json())
         this.app.bundle = this.bundle
         this.app.express = express
 

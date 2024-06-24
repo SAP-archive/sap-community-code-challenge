@@ -1,0 +1,210 @@
+{
+    "pixelPersonConfigArray" : [
+        {
+          "label": "Skin 1",
+          "id": "skin1",
+          "switchableProp": false,
+          "colors": [
+            "#eac796",
+            "#926a2d"
+          ],
+          "selectedColor": "#eac796"
+        },
+        {
+          "label": "Skin 2",
+          "id": "skin2",
+          "switchableProp": false,
+          "colors": [
+            "#D2AF7F",
+            "#6f4f1d"
+          ],
+          "selectedColor": "#D2AF7F"
+        },
+        {
+          "label": "Eyes",
+          "id": "eyes",
+          "switchableProp": false,
+          "colors": [
+            "#000",
+            "#634e34",
+            "#2e536f",
+            "#497665"
+          ],
+          "selectedColor": "#000"
+        },
+        {
+          "label": "Glasses",
+          "id": "glasses",
+          "switchableProp": true,
+          "isSelected": true,
+          "colors": [
+            "#000",
+            "#444"
+          ],
+          "selectedColor": "#000"
+        },
+        {
+          "label": "Shirt 1",
+          "id": "shirt1",
+          "switchableProp": false,
+          "colors": [
+            "#323233",
+            "#F2F2F2",
+            "#E6E6E6"
+          ],
+          "selectedColor": "#F2F2F2"
+        },
+        {
+          "label": "Shirt 2",
+          "id": "shirt2",
+          "switchableProp": false,
+          "colors": [
+            "#000",
+            "#E6E6E6",
+            "#D7D7D7"
+          ],
+          "selectedColor": "#E6E6E6"
+        },
+        {
+          "label": "Pants 1",
+          "id": "pants1",
+          "switchableProp": false,
+          "colors": [
+            "#467293",
+            "#467293"
+          ],
+          "selectedColor": "#467293"
+        },
+        {
+          "label": "Pants 2",
+          "id": "pants2",
+          "switchableProp": false,
+          "colors": [
+            "#2c4c64",
+            "#2c4c64"
+          ],
+          "selectedColor": "#2c4c64"
+        },
+        {
+          "label": "Shoes",
+          "id": "shoes",
+          "switchableProp": false,
+          "colors": [
+            "#000",
+            "#D40000"
+          ],
+          "selectedColor": "#000"
+        },
+        {
+          "label": "Laces",
+          "id": "laces",
+          "switchableProp": false,
+          "colors": [
+            "#323233",
+            "#D40000",
+            "#000"
+          ],
+          "selectedColor": "#000"
+        },
+        {
+          "label": "Shadow",
+          "id": "shadow",
+          "switchableProp": false,
+          "colors": [
+            "#66757e",
+            "#66757e"
+          ],
+          "selectedColor": "#66757e"
+        },
+        {
+          "label": "Hair 1",
+          "id": "hair1",
+          "switchableProp": false,
+          "colors": [
+            "#81786E",
+            "#14100b",
+            "#eac796"
+          ],
+          "selectedColor": "#81786E"
+        },
+        {
+          "label": "Hair 2",
+          "id": "hair2",
+          "switchableProp": false,
+          "colors": [
+            "#605345",
+            "#2e1e0a",
+            "#eac796"
+          ],
+          "selectedColor": "#605345"
+        },
+        {
+          "label": "Beard 1",
+          "id": "beard1",
+          "switchableProp": true,
+          "isSelected": false,
+          "colors": [
+            "#81786E",
+            "#0839F8"
+          ],
+          "selectedColor": "#81786E"
+        },
+        {
+          "label": "Beard 2",
+          "id": "beard2",
+          "switchableProp": true,
+          "isSelected": false,
+          "colors": [
+            "#605345",
+            "#0839F8"
+          ],
+          "selectedColor": "#605345"
+        },
+        {
+          "label": "Mouth",
+          "id": "mouth",
+          "switchableProp": false,
+          "colors": [
+            "#D2AF7F",
+            "#6f4f1d"
+          ],
+          "selectedColor": "#D2AF7F"
+        },
+        {
+          "label": "Watch",
+          "id": "watch",
+          "switchableProp": true,
+          "isSelected": false,
+          "colors": [
+            "#000",
+            "#000"
+          ],
+          "selectedColor": "#000"
+        },
+        {
+          "label": "Stripe",
+          "id": "stripe",
+          "switchableProp": false,
+          "isSelected": true,
+          "colors": [
+            "#e6104a",
+            "#e6104a"
+          ],
+          "selectedColor": "#e6104a"
+        },
+        {
+          "label": "Socks",
+          "id": "socks",
+          "switchableProp": false,
+          "isSelected": true,
+          "colors": [
+            "#FFF",
+            "#000"
+          ],
+          "selectedColor": "#000"
+        }
+    ],
+    "shapesArray": [
+
+    ]
+}

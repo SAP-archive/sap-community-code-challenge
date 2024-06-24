@@ -5,24 +5,33 @@
     xmlns:core="sap.ui.core"
     xmlns:unified="sap.ui.unified"
     xmlns:e="sap.suite.ui.commons.imageeditor"
-    xmlns="sap.m">
+    xmlns="sap.m"
+    xmlns:html="http://www.w3.org/1999/xhtml">
     <e:ImageEditorContainer id="editor" enabledButtons="Crop,Transform,Filter" mode="Crop">
-        <e:ImageEditor id="image" loaded="onImageLoaded" scaleCropArea="true" mode="CropEllipse" />
+        <e:ImageEditor id="image" loaded="onImageLoaded" scaleCropArea="true" mode="CropEllipse"/>
         <e:customToolbarControls>
+            <!-- preparation/ upload of the picture -->
             <unified:FileUploader id="fileToUpload" sendXHR="true" width="400px" placeholder="{i18n>placeholder}" uploadUrl="/upload_profile_pic" uploadComplete="uploadComplete" change="onFileChange">
                 <unified:parameters>
                     <unified:FileUploaderParameter id="uploadParam" name="selectedPic"/>
                 </unified:parameters>
             </unified:FileUploader>
-            <Button id="button" text="{i18n>Upload}" press="uploadPressed"></Button>
+            <!-- enhancement of the picture -->
+            <Button id="getPixelPerson" text="{i18n>getPixelPerson}" press="openPixelPersonDialog" />
+            <Button id="button" text="{i18n>Enhance}" press="uploadPressed"></Button>
             <Button type="Emphasized" text="Save As" press="onSaveAsPress" />
-        </e:customToolbarControls> 
+        </e:customToolbarControls>
         <e:customEllipseCropItems>
             <e:CustomSizeItem width="1" height="1" label="1:1" relative="true"/>
 
         </e:customEllipseCropItems>
-
-
-
+        
     </e:ImageEditorContainer>
+
+    <html:style>
+        .doubleHeight {
+            height: 100px !important;
+        }
+    </html:style>
+    <html:canvas id="pixelPersonCanvas1"></html:canvas>
 </mvc:View>
