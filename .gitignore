@@ -106,3 +106,4 @@ dist
 /mta_archives
 
 /app/*.zip
+.vscode/launch.json
