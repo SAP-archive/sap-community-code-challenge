@@ -34,6 +34,7 @@
     "@sap/logging": "^6.1.0",
     "@sap/textbundle": "^4.1.0",
     "accept-language-parser": "^1.5.0",
+    "axios": "^0.26.0",
     "event-loop-lag": "^1.4.0",
     "express": "^4.17.2",
     "glob": "^7.2.0",
