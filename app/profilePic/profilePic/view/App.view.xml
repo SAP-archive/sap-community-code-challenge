@@ -11,10 +11,10 @@
         <e:customToolbarControls>
             <unified:FileUploader id="fileToUpload" sendXHR="true" width="400px" placeholder="{i18n>placeholder}" uploadUrl="/upload_profile_pic" uploadComplete="uploadComplete" change="onFileChange">
                 <unified:parameters>
-                    <unified:FileUploaderParameter id="uploadParam" name="selectedPic"/>
+                    <unified:FileUploaderParameter id="uploadParam" name="sapCommunityName"/>
                 </unified:parameters>
             </unified:FileUploader>
-            <Button id="button" text="{i18n>Upload}" press="uploadPressed"></Button>
+            <Button id="button" text="{i18n>Upload}" press="enhancePressed"></Button>            
             <Button type="Emphasized" text="Save As" press="onSaveAsPress" />
         </e:customToolbarControls> 
         <e:customEllipseCropItems>
