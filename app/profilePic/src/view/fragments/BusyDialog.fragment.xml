@@ -1,0 +1,4 @@
+<c:FragmentDefinition xmlns="sap.m"
+    xmlns:c="sap.ui.core">
+    <BusyDialog title="{i18n>main.BusyDialog.title}" text="{i18n>main.BusyDialog.text}" />
+</c:FragmentDefinition>

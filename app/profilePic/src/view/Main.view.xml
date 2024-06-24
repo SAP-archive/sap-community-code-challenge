@@ -1,0 +1,23 @@
+<mvc:View controllerName="ui5.ts.profile.picture.editor.controller.Main"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:unified="sap.ui.unified"
+	xmlns:e="sap.suite.ui.commons.imageeditor"
+	xmlns="sap.m" height="100%" displayBlock="true" busy="{UIState>/main/buys}" busyIndicatorDelay="{UIState>/main/busyDelay}">
+
+	<e:ImageEditorContainer id="imageEditorContainer" enabledButtons="Crop,Transform,Filter" mode="Crop">
+		<e:ImageEditor id="imageEditor" loaded=".onImageLoaded" scaleCropArea="true" mode="CropEllipse" />
+		<e:customToolbarControls>
+			<unified:FileUploader id="fileUploader" sendXHR="true" width="400px" placeholder="{i18n>main.FileUploader.placeholder}" uploadUrl="/upload_profile_pic" uploadStart="onUploadStart" uploadComplete=".onUploadComplete" change=".onFileChange">
+				<unified:parameters>
+					<unified:FileUploaderParameter id="uploadParam" name="selectedPic"/>
+				</unified:parameters>
+			</unified:FileUploader>
+			<Button id="buttonEnhance" text="{i18n>main.ButtonEnhance.text}" press=".handleEnhancement" />
+			<Button id="buttonSaveAs" type="Emphasized" text="{i18n>main.ButtonSaveAs.text}" press=".handleSaveAs" />
+		</e:customToolbarControls>
+		<e:customEllipseCropItems>
+			<e:CustomSizeItem width="1" height="1" label="1:1" relative="true"/>
+		</e:customEllipseCropItems>
+	</e:ImageEditorContainer>
+
+</mvc:View>
