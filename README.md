@@ -93,6 +93,11 @@ Try and port the whole project to another programming language. I'm sure we will
 
 Extend the app to offer multiple server side enhancements but then extend the SAPUI5 frontend to allow the end user to choose the enhancement type. The trick there is sending the choice along with the upload (it can be done but its tricky). That challenge would be focused on UI5 skills.
 
+### Run the `wdi5` test
+
+First, start the project as explained above via `npm start`.  
+Open another console/Terminal and run `npm test`.  
+
 ## Requirements
 
 Node.js version 12.x, 14.x, or 16.x [https://nodejs.org/en/download/](https://nodejs.org/en/download/)

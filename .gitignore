@@ -106,3 +106,8 @@ dist
 /mta_archives
 
 /app/*.zip
+
+# wdi5 test artifacts
+.com.google*
+*crdownload
+*image*.png
